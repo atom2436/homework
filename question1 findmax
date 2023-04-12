@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void findmax(int m)
+{
+	int i,find;
+	int array[3][5] = { {85,78,99,96,88},{76,89,75,97,75},{64,92,90,73,56} };
+	int max = array[0][m - 1]; find = 1;
+	for (i = 0; i < 3; i++)
+	{
+		if (array[i][m - 1] > max)
+		{
+			max = array[i][m - 1];
+			find = i+1;
+		}
+	}
+	cout << "第" << m << "门课程的最高成绩为：" << max << endl;
+	cout << "而获得最高成绩的学生是第" << find << "位学生";
+}
