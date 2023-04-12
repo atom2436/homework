@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int n; 
+	float averagescroe; 
+	cout << "您想知道第几位学生的平均成绩：" << endl;
+	cin >> n; 
+	extern float avescroe(int);
+	averagescroe=avescroe(n);
+	cout << "第" << n << "位同学的平均成绩是：" << averagescroe << endl;
+	int m;
+  cout << "您想查找哪门课程的最高成绩学生：" << endl; 
+  cin >> m;
+	extern  void findmax(int);
+	findmax(m);
+	return 0;
+}
