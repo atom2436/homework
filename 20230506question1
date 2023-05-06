@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct Time
+{   string year;
+    string month;
+    string day;
+}birth;
+struct Person
+{   string type;
+    string job;
+    string name;
+    struct Time birth;
+}person;
+int main()
+{   
+    cout << "上机作业第1题。" << '\n' << "请输入这个人属于何种类型？" << endl;
+    cin >> person.type;
+    cout << "请输入职业：" << endl;
+    cin >> person.job;
+    cout << "请输入姓名：" << endl;
+    cin >> person.name;
+    cout << "请输入生日，按年 月 日的格式：" << '\n' << "年：" << endl;
+    cin >> person.birth.year;
+    cout << "月：" << endl;
+    cin >> person.birth.month;
+    cout << "日：" << endl;
+    cin >> person.birth.day; cout << endl;
+    cout << "以下是根据输入信息的输入：" << endl;
+    cout << person.type << person.job << "是" << person.name << "。" << endl;
+    cout << "他的生日是：" << person.birth.year << "年" << person.birth.month << "月" << person.birth.day << "日。" << endl;
+    return 0;
+}
