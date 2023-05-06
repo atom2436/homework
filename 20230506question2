@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct Time
+{   int year;
+    int month;
+    int day;
+}times;
+struct Monthday
+{   int months;
+    int days;
+};
+Monthday monthday[12] = { 1,31,2,28,3,31,4,30,5,31,6,30,7,31,8,31,9,30,10,31,11,30,12,31 };
+int main()
+{   cout << "上机作业第2题。" << endl;
+    cout << "请输入一个日期，按年 月 日的格式：" << '\n' << "年：" << endl;
+    cin >> times.year;
+    cout << "月：" << endl;
+    cin >> times.month;
+    cout << "日：" << endl;
+    cin >> times.day; cout << endl;
+    if ((times.year % 4 == 0 && times.year % 100 != 0) || (times.year % 400 == 0))
+    {   monthday[1].days = 29;
+        cout << "该年是闰年哟！" << endl;
+    }
+    int i, s = 0, m = times.month - 1;
+    if (m == 0) s = times.day;
+    for (i = 0; i < m; i++)
+    {s += monthday[i].days;
+    }s += times.day;
+    cout << "该日在本年中是第" << s << "天。" << endl;
+    return 0;
+}
